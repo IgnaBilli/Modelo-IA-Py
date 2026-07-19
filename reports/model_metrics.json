@@ -1,0 +1,227 @@
+{
+  "version": "1.0.0",
+  "trained_at": "2026-07-18T21:32:11.940605+00:00",
+  "dataset_rows": 3840,
+  "dataset": "terrabovina_dmi_kenya_features V2.csv",
+  "dataset_source": "terrabovina_dmi_kenya_features V2.csv",
+  "features": [
+    "peso_vivo_kg",
+    "categoria_terrabovina",
+    "condicion_corporal",
+    "estado_fisiologico_norm"
+  ],
+  "categories": [
+    "Vaca",
+    "Vaquilla",
+    "Novillo",
+    "Toro",
+    "Ternero/Ternera"
+  ],
+  "winner": "catboost",
+  "metrics": {
+    "baseline_media": {
+      "mae": 2.1284,
+      "rmse": 2.7266,
+      "r2": -0.002,
+      "folds": [
+        {
+          "mae": 2.0604,
+          "rmse": 2.6236,
+          "r2": -0.018
+        },
+        {
+          "mae": 2.2295,
+          "rmse": 2.8072,
+          "r2": -0.0097
+        },
+        {
+          "mae": 2.0612,
+          "rmse": 2.6827,
+          "r2": -0.0012
+        },
+        {
+          "mae": 2.1348,
+          "rmse": 2.7997,
+          "r2": -0.0
+        },
+        {
+          "mae": 2.159,
+          "rmse": 2.7185,
+          "r2": -0.0
+        }
+      ],
+      "por_categoria": {
+        "Vaca": {
+          "mae": 2.3846,
+          "rmse": 3.2302,
+          "r2": -0.4417
+        },
+        "Vaquilla": {
+          "mae": 1.5096,
+          "rmse": 1.7487,
+          "r2": -0.3572
+        },
+        "Novillo": {
+          "mae": 1.3903,
+          "rmse": 1.5959,
+          "r2": -1.3213
+        },
+        "Toro": {
+          "mae": 1.4803,
+          "rmse": 1.9741,
+          "r2": -0.0327
+        },
+        "Ternero/Ternera": {
+          "mae": 2.623,
+          "rmse": 2.8281,
+          "r2": -5.2702
+        }
+      }
+    },
+    "ridge": {
+      "mae": 1.1088,
+      "rmse": 1.5472,
+      "r2": 0.6774,
+      "folds": [
+        {
+          "mae": 1.0562,
+          "rmse": 1.4486,
+          "r2": 0.6897
+        },
+        {
+          "mae": 1.1954,
+          "rmse": 1.6309,
+          "r2": 0.6592
+        },
+        {
+          "mae": 1.0783,
+          "rmse": 1.5019,
+          "r2": 0.6862
+        },
+        {
+          "mae": 1.1099,
+          "rmse": 1.5979,
+          "r2": 0.6743
+        },
+        {
+          "mae": 1.107,
+          "rmse": 1.5531,
+          "r2": 0.6736
+        }
+      ],
+      "por_categoria": {
+        "Vaca": {
+          "mae": 1.5907,
+          "rmse": 2.0705,
+          "r2": 0.4076
+        },
+        "Vaquilla": {
+          "mae": 0.7544,
+          "rmse": 0.9469,
+          "r2": 0.6021
+        },
+        "Novillo": {
+          "mae": 0.668,
+          "rmse": 0.8058,
+          "r2": 0.4082
+        },
+        "Toro": {
+          "mae": 1.0361,
+          "rmse": 1.3807,
+          "r2": 0.4948
+        },
+        "Ternero/Ternera": {
+          "mae": 0.602,
+          "rmse": 0.7527,
+          "r2": 0.5558
+        }
+      }
+    },
+    "catboost": {
+      "mae": 1.1009,
+      "rmse": 1.5482,
+      "r2": 0.6769,
+      "folds": [
+        {
+          "mae": 1.0332,
+          "rmse": 1.4337,
+          "r2": 0.696
+        },
+        {
+          "mae": 1.2206,
+          "rmse": 1.6475,
+          "r2": 0.6522
+        },
+        {
+          "mae": 1.0794,
+          "rmse": 1.5201,
+          "r2": 0.6786
+        },
+        {
+          "mae": 1.0738,
+          "rmse": 1.5595,
+          "r2": 0.6897
+        },
+        {
+          "mae": 1.1016,
+          "rmse": 1.5766,
+          "r2": 0.6637
+        }
+      ],
+      "por_categoria": {
+        "Vaca": {
+          "mae": 1.5892,
+          "rmse": 2.0701,
+          "r2": 0.4079
+        },
+        "Vaquilla": {
+          "mae": 0.7822,
+          "rmse": 0.9675,
+          "r2": 0.5846
+        },
+        "Novillo": {
+          "mae": 0.6675,
+          "rmse": 0.8005,
+          "r2": 0.416
+        },
+        "Toro": {
+          "mae": 1.035,
+          "rmse": 1.4417,
+          "r2": 0.4492
+        },
+        "Ternero/Ternera": {
+          "mae": 0.5419,
+          "rmse": 0.7068,
+          "r2": 0.6084
+        }
+      }
+    }
+  },
+  "weight_ranges_kg": {
+    "Vaca": {
+      "min": 79.1,
+      "max": 525.2
+    },
+    "Vaquilla": {
+      "min": 54.6,
+      "max": 412.8
+    },
+    "Novillo": {
+      "min": 59.5,
+      "max": 278.9
+    },
+    "Toro": {
+      "min": 97.0,
+      "max": 595.5
+    },
+    "Ternero/Ternera": {
+      "min": 19.6,
+      "max": 235.9
+    }
+  },
+  "limitations": [
+    "Entrenado con datos de sistemas productivos de Bomet, Kenia.",
+    "No incluye clima, calidad o disponibilidad del forraje.",
+    "Debe validarse con datos locales antes de usarse para decisiones nutricionales en Argentina."
+  ]
+}

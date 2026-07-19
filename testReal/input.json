@@ -1,0 +1,23 @@
+{
+  "animales": [
+    {
+      "animal_id": "A-001",
+      "peso_vivo_kg": 420,
+      "categoria_terrabovina": "Vaca",
+      "condicion_corporal": 3.0,
+      "estado_fisiologico_norm": "L"
+    },
+    {
+      "animal_id": "A-002",
+      "peso_vivo_kg": 400,
+      "categoria_terrabovina": "Novillo"
+    },
+    {
+      "animal_id": "A-003",
+      "peso_vivo_kg": 400,
+      "categoria_terrabovina": "Vaca",
+      "condicion_corporal": 3.0,
+      "estado_fisiologico_norm": "L"
+    }
+  ]
+}
