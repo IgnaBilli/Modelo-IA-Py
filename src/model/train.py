@@ -1,11 +1,12 @@
-import json
 from datetime import datetime, timezone
+import json
 
+from catboost import CatBoostRegressor
 import joblib
 import numpy as np
-from catboost import CatBoostRegressor
 from sklearn.compose import ColumnTransformer
 from sklearn.dummy import DummyRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
@@ -14,8 +15,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from tqdm.auto import tqdm
 
-from src.config import DATA_PATH, MODEL_PATH, REPORT_PATH
+from src.config import DATA_PATH, FIGURES_DIR, MODEL_PATH, REPORT_PATH
 from src.model.features import CATEGORICAL_FEATURES, CATEGORIES, FEATURES, NUMERIC_FEATURES, load_training_data
+from src.visualization.plots import generate_all_plots
 
 RANDOM_STATE = 42
 
@@ -38,6 +40,10 @@ def model_candidates() -> dict:
         "ridge": Pipeline([
             ("preprocessor", sklearn_preprocessor()),
             ("model", Ridge(alpha=10.0)),
+        ]),
+        "random_forest": Pipeline([
+            ("preprocessor", sklearn_preprocessor()),
+            ("model", RandomForestRegressor(n_estimators=100, max_depth=10, random_state=RANDOM_STATE)),
         ]),
         "catboost": CatBoostRegressor(
             iterations=500,
@@ -65,6 +71,7 @@ def train() -> dict:
     splitter = StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
     candidates = model_candidates()
     report = {}
+    out_of_fold_preds = {}
 
     total_fits = len(candidates) * splitter.get_n_splits() + 1
     with tqdm(total=total_fits, desc="Entrenando", unit="ajuste", dynamic_ncols=True) as progress:
@@ -86,10 +93,13 @@ def train() -> dict:
             report[name] = metric_summary(y, out_of_fold)
             report[name]["folds"] = fold_metrics
             report[name]["por_categoria"] = {
-                category: metric_summary(y[X["categoria_terrabovina"] == category],
-                                         out_of_fold[X["categoria_terrabovina"] == category])
+                category: metric_summary(
+                    y[X["categoria_terrabovina"] == category],
+                    out_of_fold[X["categoria_terrabovina"] == category],
+                )
                 for category in CATEGORIES
             }
+            out_of_fold_preds[name] = out_of_fold
 
         winner = min(report, key=lambda name: report[name]["mae"])
         progress.set_postfix_str(f"modelo={winner}, entrenamiento final")
@@ -104,12 +114,12 @@ def train() -> dict:
         }
         for category in CATEGORIES
     }
+
     metadata = {
         "version": "1.0.0",
         "trained_at": datetime.now(timezone.utc).isoformat(),
         "dataset_rows": len(X),
         "dataset": DATA_PATH.name,
-        "dataset_source": "terrabovina_dmi_kenya_features V2.csv",
         "features": FEATURES,
         "categories": CATEGORIES,
         "winner": winner,
@@ -121,11 +131,25 @@ def train() -> dict:
             "Debe validarse con datos locales antes de usarse para decisiones nutricionales en Argentina.",
         ],
     }
+
     bundle = {"model": final_model, "metadata": metadata}
     MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
     joblib.dump(bundle, MODEL_PATH)
     REPORT_PATH.write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # Generate complete suite of charts
+    winner_oof_preds = out_of_fold_preds[winner]
+    generate_all_plots(
+        y_true=y,
+        y_pred=winner_oof_preds,
+        X_df=X,
+        metrics_report=report,
+        winning_model=final_model,
+        output_dir=FIGURES_DIR,
+    )
+
     print(json.dumps({"winner": winner, "metrics": report[winner]}, indent=2))
     return metadata
 

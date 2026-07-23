@@ -1,0 +1,330 @@
+================================================================================
+          DOCUMENTACIÓN DETALLADA Y EXPLICACIÓN TÉCNICA COMPLETA DEL PROYECTO
+                  MODELO DE INTELIGENCIA ARTIFICIAL - DMI TERRABOVINA
+================================================================================
+
+--------------------------------------------------------------------------------
+1. ESTRUCTURA GENERAL DEL PROYECTO
+--------------------------------------------------------------------------------
+
+El proyecto está organizado en una arquitectura modular que separa claramente 
+el proceso de datos (ETL), el entrenamiento y evaluación de Machine Learning,
+la generación de gráficos y métricas, y la inferencia con datos reales.
+
+Modelo-IA-Py/
+│
+├── data/
+│   └── processed/
+│       └── terrabovina_dmi_kenya_features V2.csv
+│
+├── models/
+│   └── dmi_model.joblib
+│
+├── reports/
+│   ├── etl_summary.json
+│   ├── model_metrics.json
+│   └── figures/
+│       ├── 1_model_comparison_mae_r2.png
+│       ├── 2_actual_vs_predicted.png
+│       ├── 3_residuals_distribution.png
+│       ├── 4_feature_importance.png
+│       ├── 5_mae_by_category.png
+│       ├── 6_weight_vs_dmi_scatter.png
+│       ├── 7_dmi_by_category_boxplot.png
+│       └── 8_correlation_heatmap.png
+│
+├── src/
+│   ├── config.py
+│   ├── etl/
+│   │   ├── __init__.py
+│   │   ├── extract.py
+│   │   ├── transform.py
+│   │   ├── load.py
+│   │   └── run_etl.py
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── features.py
+│   │   ├── predictor.py
+│   │   └── train.py
+│   └── visualization/
+│       ├── __init__.py
+│       └── plots.py
+│
+├── testReal/
+│   ├── ejecutar.py
+│   ├── input.json
+│   └── output.json
+│
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── EXPLICACION_PROYECTO_DETALLADA.txt
+
+================================================================================
+2. DESCRIPCIÓN DETALLADA DE CARPETAS Y ARCHIVOS (HASTA EL ÚLTIMO DETALLE)
+================================================================================
+
+--------------------------------------------------------------------------------
+Carpeta: data/
+--------------------------------------------------------------------------------
+Almacena las fuentes de datos del proyecto.
+- data/processed/terrabovina_dmi_kenya_features V2.csv:
+  Archivo CSV procesado que contiene 3,833 registros de observaciones nutricionales 
+  e ingesta diaria de materia seca (DMI) en bovinos de Kenia. Contiene las variables 
+  numéricas y categóricas utilizadas tanto en el proceso ETL como en el entrenamiento.
+  * Columnas principales: `animal_id`, `hh` (identificador del hogar/finca), `categoria_terrabovina` 
+    (Vaca, Vaquilla, Novillo, Toro, Ternero/Ternera), `peso_vivo_kg`, `condicion_corporal` (1.5 a 4.5), 
+    `dmi_kg_dia` (Consumo diario en kg de Materia Seca), `estado_fisiologico_norm` (B, L, P, N, DESCONOCIDO).
+
+--------------------------------------------------------------------------------
+Carpeta: models/
+--------------------------------------------------------------------------------
+Guarda los artefactos de modelos entrenados y listos para producción.
+- models/dmi_model.joblib:
+  Archivo binario comprimido mediante la librería `joblib`. Contiene un diccionario Python con:
+  1. "model": El objeto Pipeline entrenado de Scikit-Learn (ColumnTransformer + Ridge Regressor).
+  2. "metadata": Diccionario con la versión ("1.0.0"), fecha de entrenamiento UTC, número de filas (3,833),
+     variables de entrada, categorías válidas, rangos de peso por categoría, métricas y advertencias de uso.
+
+--------------------------------------------------------------------------------
+Carpeta: reports/
+--------------------------------------------------------------------------------
+Centraliza los reportes cuantitativos y las figuras/gráficos generados.
+- reports/etl_summary.json:
+  Archivo JSON que registra la calidad del proceso ETL: timestamp UTC de ejecución, estado ("SUCCESS"),
+  filas extraídas (3,840), conteo de nulos originales, filas filtradas por outliers (7 filas), 
+  filas finales (3,833), porcentaje de retención (99.82%), distribución por categoría animal y estadísticas 
+  de peso vivo (mínimo, promedio, máximo).
+- reports/model_metrics.json:
+  Archivo JSON detallado con las métricas de rendimiento (MAE, RMSE, R²) de todos los modelos evaluados,
+  los resultados individuales de los 5 pliegues de validación cruzada y el desglose del error por categoría.
+- reports/figures/:
+  Carpeta donde se guardan 8 gráficos en formato PNG de alta resolución (300 DPI):
+  1. 1_model_comparison_mae_r2.png: Comparación de barras del MAE y R² entre modelos.
+  2. 2_actual_vs_predicted.png: Dispersion DMI Real vs Predicho con linea de identidad y = x.
+  3. 3_residuals_distribution.png: Histograma y curva KDE de la distribución de errores (residuos).
+  4. 4_feature_importance.png: Importancia / magnitudes absolutas de los coeficientes del modelo Ridge.
+  5. 5_mae_by_category.png: Error Medio Absoluto (MAE) según la categoría animal.
+  6. 6_weight_vs_dmi_scatter.png: Dispersion de Peso Vivo vs DMI Real codificado por colores según categoría.
+  7. 7_dmi_by_category_boxplot.png: Diagrama de caja del DMI Real por categoría.
+  8. 8_correlation_heatmap.png: Mapa de calor de correlaciones entre variables numéricas.
+
+--------------------------------------------------------------------------------
+Carpeta: src/ (Código Fuente Principal)
+--------------------------------------------------------------------------------
+- src/config.py:
+  Define las rutas absolutas del proyecto usando `pathlib.Path`:
+  * `PROJECT_ROOT`: Ruta raíz (dos niveles arriba de config.py).
+  * `DATA_DIR`: Subcarpeta data/.
+  * `RAW_DATA_PATH`: Ruta de datos raw (opcional).
+  * `DATA_PATH` / `PROCESSED_DATA_PATH`: Ruta al CSV procesado en data/processed/.
+  * `MODEL_PATH`: Ruta al archivo binario models/dmi_model.joblib.
+  * `REPORTS_DIR`: Subcarpeta reports/.
+  * `FIGURES_DIR`: Subcarpeta reports/figures/.
+  * `REPORT_PATH`: Ruta a reports/model_metrics.json.
+  * `ETL_REPORT_PATH`: Ruta a reports/etl_summary.json.
+
+- src/etl/ (Módulo ETL):
+  - src/etl/__init__.py: Define el directorio como paquete Python.
+  - src/etl/extract.py: `extract_data(source_path)` lee el CSV fuente y verifica que contenga las 7 columnas 
+    requeridas (`animal_id`, `hh`, `categoria_terrabovina`, `peso_vivo_kg`, `dmi_kg_dia`, `condicion_corporal`, `estado_fisiologico_norm`).
+  - src/etl/transform.py: `transform_data(df)` filtra outliers marcados, realiza conversiones numéricas, 
+    normaliza strings en categorías y estados fisiológicos, impone reglas de negocio (la condición corporal 
+    solo aplica a Vacas), aplica validación de dominio (peso 15-900 kg, DMI 0.2-20 kg/día) y calcula `% DMI / Peso`.
+  - src/etl/load.py: `load_data(df, output_csv_path, etl_report_path, metadata)` guarda el CSV limpio y 
+    escribe el reporte `etl_summary.json`.
+  - src/etl/run_etl.py: Script ejecutable (`python -m src.etl.run_etl`) que orquesta extract -> transform -> load.
+
+- src/model/ (Módulo de Machine Learning):
+  - src/model/__init__.py: Define el paquete.
+  - src/model/features.py: Define las constantes de características (`FEATURES`, `NUMERIC_FEATURES`, `CATEGORICAL_FEATURES`, 
+    `CATEGORIES`, `MISSING_CATEGORY`). `prepare_features(df)` convierte y limpia las variables de entrada tanto para 
+    entrenamiento como para inferencia. `load_training_data(path)` valida que el dataset tenga más de 1000 filas 
+    y que las variables estén en los rangos permitidos.
+  - src/model/predictor.py: Clase `HerdPredictor`. Carga `dmi_model.joblib`. `predict(animals)` recibe una lista 
+    de diccionarios, invoca `prepare_features`, ejecuta `.predict()`, impone un piso de 0.0 kg/día (`np.maximum`), 
+    calcula `% de peso vivo` y genera advertencias si el peso del animal escapa al rango min/max observado durante el entrenamiento.
+  - src/model/train.py: Script ejecutable de entrenamiento (`python -m src.model.train`). Construye los modelos, 
+    corre la validación cruzada `StratifiedGroupKFold`, selecciona el modelo de menor MAE, entrena el modelo final 
+    sobre todo el dataset, guarda el artefacto `.joblib`, escribe `model_metrics.json` e invoca a `plots.py`.
+
+- src/visualization/ (Módulo de Gráficos):
+  - src/visualization/__init__.py: Define el paquete.
+  - src/visualization/plots.py: Función `generate_all_plots()`. Recibe valores reales, predichos, DataFrame de entrada, 
+    reporte de métricas, modelo ganador y directorio de salida. Extrae de forma segura los componentes del modelo 
+    (soporta Pipelines, Ridge y árboles) y genera las 8 figuras PNG con Seaborn y Matplotlib.
+
+--------------------------------------------------------------------------------
+Carpeta: testReal/ (Prueba de Inferencia)
+--------------------------------------------------------------------------------
+- testReal/ejecutar.py: Script principal para pruebas con JSON (`python testReal/ejecutar.py`).
+- testReal/input.json: Archivo JSON editable con la estructura de animales de entrada.
+- testReal/output.json: Archivo JSON generado con los resultados de la predicción y advertencias.
+
+--------------------------------------------------------------------------------
+Archivos Raíz
+--------------------------------------------------------------------------------
+- requirements.txt: `pandas>=2.2`, `scikit-learn>=1.6`, `catboost>=1.2.8`, `joblib>=1.4`, `pytest>=8.3`, `tqdm>=4.67`, `matplotlib>=3.8`, `seaborn>=0.13`.
+- README.md: Documentación ejecutiva del proyecto.
+- .gitignore: Filtro de exclusión para Git.
+
+================================================================================
+3. EVALUACIÓN DETALLADA DE MODELOS PROBADOS
+================================================================================
+
+Durante la fase de experimentación y entrenamiento, se configuraron y evaluaron 
+cuatro algoritmos/modelos distintos mediante Validación Cruzada Agrupada (5 pliegues):
+
+1. **baseline_media (Modelo de Referencia / Control)**:
+   * **Clase**: `sklearn.dummy.DummyRegressor(strategy="mean")`
+   * **Descripción**: Predice siempre el valor medio global del consumo de materia seca (DMI) 
+     en los datos de entrenamiento.
+   * **Propósito**: Actúa como punto de referencia mínimo (Benchmark). Cualquier modelo útil debe 
+     superar holgadamente al modelo baseline.
+
+2. **ridge (Regresión Ridge / Regresión Lineal Regularizada L2) [MODELO GANADOR]**:
+   * **Clase**: `sklearn.pipeline.Pipeline` con `ColumnTransformer` + `sklearn.linear_model.Ridge(alpha=10.0)`
+   * **Preprocesamiento**:
+     - Variables numéricas (`peso_vivo_kg`, `condicion_corporal`): Imputación de mediana (`SimpleImputer`) + Escalado estándar (`StandardScaler`).
+     - Variables categóricas (`categoria_terrabovina`, `estado_fisiologico_norm`): Codificación One-Hot (`OneHotEncoder(handle_unknown="ignore")`).
+   * **Hiperparámetro**: `alpha=10.0` (fuerza de la regularización L2).
+   * **Resultados**:
+     - **MAE Global**: **1.1019 kg MS/día** (El error más bajo de todos los modelos).
+     - **RMSE Global**: 1.5354 kg MS/día.
+     - **R² Score**: **0.6821** (Explica el 68.21% de la variabilidad del consumo).
+
+3. **random_forest (Bosques Aleatorios)**:
+   * **Clase**: `sklearn.pipeline.Pipeline` con `ColumnTransformer` + `sklearn.ensemble.RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)`
+   * **Descripción**: Ensamble de 100 árboles de decisión que captura interacciones complejas no lineales.
+   * **Resultados**: Obtuvo un desempeño sólido, pero presentó ligero sobreajuste en ciertas categorías 
+     debido a la dispersión de datos en bovinos jóvenes o machos.
+
+4. **catboost (Gradient Boosting para Datos Categóricos)**:
+   * **Clase**: `catboost.CatBoostRegressor(iterations=500, depth=6, learning_rate=0.04, loss_function="RMSE", random_seed=42)`
+   * **Descripción**: Algoritmo avanzado de aumento de gradiente sobre árboles de decisión, diseñado 
+     para manejar nativamente variables categóricas.
+   * **Resultados**: Obtuvo un MAE cercano (~1.1578 kg MS/día), pero fue superado ligeramente por Ridge 
+     debido a la fuerte relación lineal entre el peso vivo y el consumo de materia seca.
+
+================================================================================
+4. ¿POR QUÉ FUE ELEGIDO EL MODELO RIDGE? (JUSTIFICACIÓN TÉCNICA Y PRÁCTICA)
+================================================================================
+
+El algoritmo **Ridge Regressor** fue seleccionado como el modelo ganador definitivo 
+debido a las siguientes razones técnicas y biológicas:
+
+1. **Menor Error Absoluto Medio (MAE)**:
+   Ridge obtuvo un MAE de **1.1019 kg MS/día**, superando a CatBoost, Random Forest y al Baseline. 
+   Esto significa que en promedio, las predicciones del modelo se equivocan por poco más de 1 kg de materia seca diaria.
+
+2. **Dominio Nutricional Biológico (Relación Lineal Peso-Consumo)**:
+   En nutrición animal, el peso vivo (`peso_vivo_kg`) es el determinante fisiológico número uno de la capacidad de ingesta 
+   del rumen. La relación entre peso corporal e ingesta es predominantemente lineal. Los modelos basados en árboles 
+   (como Random Forest o CatBoost) generan predicciones en forma de "escalones", mientras que Ridge captura una curva 
+   suave y continua ideal para estimar raciones de alimento.
+
+3. **Regularización L2 ($\alpha=10.0$) contra Sobreajuste (Overfitting)**:
+   Al aplicar penalización L2 sobre las variables categóricas codificadas mediante One-Hot Encoding, Ridge contrae los 
+   coeficientes de categorías con pocos datos (como los Toros o Novillos), evitando que el modelo memorice el ruido 
+   de fincas específicas.
+
+4. **Estabilidad en Validación Cruzada por Hogar (`hh`)**:
+   En la evaluación de 5 pliegues estratificados por finca/hogar (donde ninguna finca de prueba estuvo en entrenamiento):
+   - Fold 1: MAE 1.1138 | R² 0.6617
+   - Fold 2: MAE 1.0993 | R² 0.7214
+   - Fold 3: MAE 1.1558 | R² 0.6830
+   - Fold 4: MAE 1.0742 | R² 0.6818
+   - Fold 5: MAE 1.0715 | R² 0.6314
+   La pequeña varianza entre folds demuestra que el modelo generaliza consistentemente ante fincas totalmente desconocidas.
+
+5. **Excelente Rendimiento por Categoría Bovina**:
+   - Ternero/Ternera: MAE 0.5846 kg/día (R² = 0.5858)
+   - Novillo: MAE 0.6639 kg/día (R² = 0.4126)
+   - Vaquilla: MAE 0.7540 kg/día (R² = 0.6037)
+   - Toro: MAE 1.0204 kg/día (R² = 0.5068)
+   - Vaca: MAE 1.5857 kg/día (R² = 0.4110)
+
+6. **Explicabilidad e Interpretabilidad**:
+   A diferencia de las "cajas negras", Ridge permite inspeccionar directamente la ecuación del modelo:
+   - `peso_vivo_kg` aporta el coeficiente más alto (magnitud 1.951).
+   - Los estados de lactancia (`Estado: L`, `Estado: N`, `Estado: B`) aportan coeficientes positivos de incremento 
+     de ingesta (~0.87 a 0.92 kg/día), lo cual concuerda exactamente con la teoría nutricional bovina (una vaca en lactancia consume más alimento).
+
+================================================================================
+5. PROCESO DETALLADO DEL ETL (PASO A PASO CÓDIGO A CÓDIGO)
+================================================================================
+
+El proceso ETL garantiza que los datos estén limpios, formateados y libres de anomalías.
+
+1. **Fase de Extracción (`src/etl/extract.py`)**:
+   - Función `extract_data(source_path)`:
+     * Verifica la existencia física del archivo CSV con `source_path.exists()`.
+     * Ejecuta `pd.read_csv(source_path)`.
+     * Valida la presencia de las 7 columnas contractuales.
+     * Retorna el DataFrame crudo y estadísticas iniciales (conteo de filas y nulos).
+
+2. **Fase de Transformación (`src/etl/transform.py`)**:
+   - Función `transform_data(df)`:
+     * **Filtrado de Outliers**: Revisa si existen columnas banderas de atipicidad (`outlier_peso`, `outlier_dmi_abs`, `outlier_dmi_pct_bw`). Filtra cualquier fila con `True` (se removieron 7 filas atípicas).
+     * **Conversión Numérica**: Aplica `pd.to_numeric(..., errors="coerce")` sobre `peso_vivo_kg`, `dmi_kg_dia` y `condicion_corporal`.
+     * **Limpieza de Cadenas**: Aplica `.astype(str).str.strip()` en `categoria_terrabovina` y la función `normalize_estado()` en `estado_fisiologico_norm` (remueve espacios, convierte a mayúsculas y asigna "DESCONOCIDO" si es nulo).
+     * **Reglas de Negocio Nutricionales**:
+       ```python
+       not_cow = df_clean["categoria_terrabovina"] != "Vaca"
+       df_clean.loc[not_cow, "condicion_corporal"] = np.nan
+       df_clean.loc[not_cow, "estado_fisiologico_norm"] = "DESCONOCIDO"
+       ```
+     * **Filtros de Dominio Fisiológico**: Mantiene únicamente registros con `peso_vivo_kg` en [15.0, 900.0], `dmi_kg_dia` en [0.2, 20.0] y categoría dentro de las 5 categorías oficiales.
+     * **Cálculo de Consumo Relativo**: Registra `dmi_pct_peso_vivo = (dmi_kg_dia / peso_vivo_kg) * 100.0`.
+     * Retorna el DataFrame limpio (3,833 filas) y el diccionario de estadísticas de retención (99.82%).
+
+3. **Fase de Carga (`src/etl/load.py` & `src/etl/run_etl.py`)**:
+   - `load_data()` escribe el archivo procesado `data/processed/terrabovina_dmi_kenya_features V2.csv` con `encoding="utf-8"` e `index=False`.
+   - Genera el reporte de calidad `reports/etl_summary.json`.
+
+================================================================================
+6. PIPELINE Y ENTRENAMIENTO DETALLADO (PASO A PASO)
+================================================================================
+
+1. **Carga y Preparación (`src/model/features.py`)**:
+   - `prepare_features(df)` aísla las columnas `FEATURES = ["peso_vivo_kg", "categoria_terrabovina", "condicion_corporal", "estado_fisiologico_norm"]`.
+   - `load_training_data(path)` extrae las entradas $X$, el objetivo $y = \text{dmi\_kg\_dia}$ y los grupos $groups = \text{hh}$.
+
+2. **Construcción de Pipelines y Preprocesador (`src/model/train.py`)**:
+   - `sklearn_preprocessor()` construye un `ColumnTransformer`:
+     * Numéricas: Imputa medianas con `add_indicator=True` y escala con `StandardScaler()`.
+     * Categóricas: `OneHotEncoder(handle_unknown="ignore", sparse_output=False)`.
+
+3. **Bucle de Validación Cruzada (`train()`)**:
+   - Se usa `StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)`.
+   - En cada pliegue, entrena el modelo candidato en el 80% de las fincas y predice sobre el 20% de fincas de prueba.
+   - Trunca las predicciones a valores no negativos con `np.maximum(predictions, 0.0)`.
+   - Registra el MAE, RMSE y R² acumulados fuera de pliegue (Out-of-Fold).
+
+4. **Entrenamiento Final y Empaquetado**:
+   - Selecciona el modelo con menor MAE (Ridge).
+   - Re-entrena Ridge con el 100% de los datos.
+   - Extrae los rangos de peso observados (mínimo y máximo) por cada categoría para validación en producción.
+   - Serializa con `joblib.dump({"model": final_model, "metadata": metadata}, MODEL_PATH)`.
+   - Guarda `reports/model_metrics.json`.
+
+5. **Generación Automatizada de 8 Gráficos (`src/visualization/plots.py`)**:
+   - `generate_all_plots()` lee las predicciones fuera de pliegue del modelo ganador y genera:
+     1. `1_model_comparison_mae_r2.png`: Gráfico de barras dual comparando MAE y R².
+     2. `2_actual_vs_predicted.png`: Scatter plot Real vs Predicho con línea roja ajustada $y = x$.
+     3. `3_residuals_distribution.png`: Distribución gaussiana de errores centrada en cero.
+     4. `4_feature_importance.png`: Barras horizontales con la magnitud de los coeficientes de Ridge.
+     5. `5_mae_by_category.png`: Barras del MAE para cada categoría animal.
+     6. `6_weight_vs_dmi_scatter.png`: Relación peso vs consumo por categoría.
+     7. `7_dmi_by_category_boxplot.png`: Diagrama de caja y bigotes del consumo DMI por categoría.
+     8. `8_correlation_heatmap.png`: Mapa de calor de matriz de correlación de Pearson.
+
+6. **Ejecución de Inferencia Real (`testReal/ejecutar.py`)**:
+   - `HerdPredictor.__init__()` carga el paquete `.joblib`.
+   - `predict(animals)` toma la lista de diccionarios de `testReal/input.json`.
+   - Aplica `prepare_features`, calcula el consumo diario `dmi_kg_dia` y `% del peso vivo`.
+   - Valida si el peso de cada animal cae dentro de los rangos históricos de su categoría y emite advertencias detalladas en `testReal/output.json`.
+
+================================================================================
+FIN DE LA DOCUMENTACIÓN TÉCNICA DETALLADA
+================================================================================

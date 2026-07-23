@@ -2,18 +2,18 @@
   "predicciones": [
     {
       "animal_id": "A-001",
-      "dmi_kg_dia": 10.41,
-      "dmi_pct_peso_vivo": 2.48
+      "dmi_kg_dia": 10.1,
+      "dmi_pct_peso_vivo": 2.4
     },
     {
       "animal_id": "A-002",
-      "dmi_kg_dia": 7.69,
-      "dmi_pct_peso_vivo": 1.92
+      "dmi_kg_dia": 8.53,
+      "dmi_pct_peso_vivo": 2.13
     },
     {
       "animal_id": "A-003",
-      "dmi_kg_dia": 10.04,
-      "dmi_pct_peso_vivo": 2.51
+      "dmi_kg_dia": 9.72,
+      "dmi_pct_peso_vivo": 2.43
     }
   ],
   "advertencias": [

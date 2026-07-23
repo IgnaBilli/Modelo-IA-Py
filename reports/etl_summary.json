@@ -1,0 +1,78 @@
+{
+  "execution_timestamp": "2026-07-23T18:02:20.378117+00:00",
+  "status": "SUCCESS",
+  "extract": {
+    "source_path": "C:\\Users\\ignab\\OneDrive\\Escritorio\\Desarrollo\\Modelo-IA-Py\\data\\processed\\terrabovina_dmi_kenya_features V2.csv",
+    "total_rows_extracted": 3833,
+    "total_columns": 17,
+    "column_names": [
+      "animal_id",
+      "hh",
+      "kenya_category",
+      "categoria_terrabovina",
+      "periodo",
+      "periodo_fechas",
+      "fecha_inicio",
+      "fecha_fin",
+      "peso_vivo_kg",
+      "condicion_corporal",
+      "dmi_kg_dia",
+      "dmi_pct_peso_vivo",
+      "outlier_peso",
+      "outlier_dmi_abs",
+      "outlier_dmi_pct_bw",
+      "id_ambiguo",
+      "estado_fisiologico_norm"
+    ],
+    "null_counts_raw": {
+      "animal_id": 0,
+      "hh": 0,
+      "categoria_terrabovina": 0,
+      "peso_vivo_kg": 0,
+      "dmi_kg_dia": 0,
+      "condicion_corporal": 2111,
+      "estado_fisiologico_norm": 0
+    }
+  },
+  "transform": {
+    "initial_rows": 3833,
+    "outliers_removed": 0,
+    "invalid_domain_rows_removed": 0,
+    "final_rows": 3833,
+    "rows_retained_pct": 100.0,
+    "categories_distribution": {
+      "Vaca": 1722,
+      "Ternero/Ternera": 811,
+      "Vaquilla": 777,
+      "Novillo": 282,
+      "Toro": 241
+    },
+    "weight_stats_by_category": {
+      "Vaca": {
+        "min": 79.1,
+        "mean": 280.17,
+        "max": 525.2
+      },
+      "Vaquilla": {
+        "min": 54.6,
+        "mean": 175.36,
+        "max": 412.8
+      },
+      "Novillo": {
+        "min": 59.5,
+        "mean": 140.25,
+        "max": 278.9
+      },
+      "Toro": {
+        "min": 97.0,
+        "mean": 261.56,
+        "max": 595.5
+      },
+      "Ternero/Ternera": {
+        "min": 19.6,
+        "mean": 72.08,
+        "max": 235.9
+      }
+    }
+  }
+}

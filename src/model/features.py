@@ -45,8 +45,9 @@ def load_training_data(path) -> tuple[pd.DataFrame, pd.Series, pd.Series]:
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"Dataset invalido; faltan columnas: {sorted(missing)}")
-    if len(df) != 3840:
-        raise ValueError(f"Se esperaban 3840 filas del ETL, se encontraron {len(df)}")
+    if len(df) < 1000:
+        raise ValueError(f"Dataset insuficientemente poblado: se encontraron {len(df)} filas.")
+
 
     X = prepare_features(df)
     y = pd.to_numeric(df[TARGET], errors="raise")
