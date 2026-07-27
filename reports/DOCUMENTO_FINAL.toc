@@ -1,0 +1,49 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Resumen ejecutivo}{3}{section.1}%
+\contentsline {section}{\numberline {2}Introducción}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}¿Por qué se realiza este trabajo?}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Materia seca y DMI}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Objetivo general}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Objetivos específicos}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Dataset}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Origen, dimensión y unidad observacional}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Diccionario completo de las 17 columnas}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Variables utilizadas}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Estadísticas principales}{5}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Composición por categoría}{6}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Estado fisiológico}{6}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Preparación común y metodología de evaluación}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Preparación de entradas}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Separación por hogares}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Métricas y su Interpretación Práctica}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Modelo V1: regresión Ridge}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Motivación y formulación}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Pipeline de preprocesamiento}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Candidatos y entrenamiento}{9}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Resultados de selección}{10}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Estabilidad por fold}{10}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Métricas por categoría}{11}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Lectura de métricas: qué significan y qué tan buenas son}{11}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.7.1}Lectura por categoría}{11}{subsubsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.8}Fortalezas y limitaciones de V1}{14}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Modelo V2 mejorado: ensamble por categoría}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Motivación}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Ingeniería de características}{14}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Especialistas candidatos}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Selección del especialista y peso}{15}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Entrenamiento y validación anidada}{15}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Resultados anidados globales}{15}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Resultados anidados por categoría}{16}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Lectura de métricas: qué significan y qué tan buenas son}{16}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1}Lectura por categoría}{17}{subsubsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.9}Estabilidad por fold externo}{18}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Resultado de desarrollo}{18}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Fortalezas y limitaciones de V2 mejorado}{19}{subsection.6.11}%
+\contentsline {section}{\numberline {7}Comparación final}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Comparación global principal}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Comparación por categoría}{20}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Comparación por fold}{22}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}¿Con qué modelo quedarse?}{23}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Inferencia y uso}{23}{section.8}%
+\contentsline {section}{\numberline {9}Limitaciones y validez}{23}{section.9}%
+\contentsline {section}{\numberline {10}Conclusiones}{24}{section.10}%

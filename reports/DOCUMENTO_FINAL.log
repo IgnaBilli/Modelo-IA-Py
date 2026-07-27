@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.23)  23 JUL 2026 16:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.23)  27 JUL 2026 01:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./reports/INFORME_TECNICO_MODELO_DMI.tex
-(reports/INFORME_TECNICO_MODELO_DMI.tex
+**./DOCUMENTO_FINAL.tex
+(DOCUMENTO_FINAL.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -22,13 +22,17 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
@@ -44,11 +48,12 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.st
-y
+e.sty
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-12-24 L3 programming layer (loader) 
 
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
@@ -80,10 +85,11 @@ X
 \l__fontspec_tmpa_dim=\dimen157
 \l__fontspec_tmpb_dim=\dimen158
 \l__fontspec_tmpc_dim=\dimen159
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+ (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg
-)))
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+)
 
 Package fontspec Info: 
 (fontspec)             Font family 'Arial(0)' created for font 'Arial' with
@@ -117,7 +123,7 @@ xt;"
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
 tex-text;"
 
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+ (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count296
@@ -137,12 +143,14 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?)
 on input line 2101.
 \U@D=\dimen160
 \l@unhyphenated=\language79
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count297
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4196.
+
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -168,20 +176,25 @@ LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1)
 on input line 7.
 LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
  on input line 7.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
+
 For additional information on amsmath, use the `?' option.
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen161
-)) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+))
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen162
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count299
@@ -231,8 +244,10 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -243,8 +258,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
 y
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
@@ -253,12 +270,14 @@ fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen170
 \Gin@req@width=\dimen171
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen172
 \lightrulewidth=\dimen173
@@ -277,7 +296,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count313
 \@lastruleclass=\count314
 \@thisrulewidth=\dimen184
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
@@ -295,7 +315,11 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count318
 \c@LT@chunks=\count319
 \LT@p@ftn=\toks25
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen186
 \ar@mcellbox=\box60
@@ -304,8 +328,7 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box61
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+)
 \TX@col@width=\dimen188
 \TX@old@table=\dimen189
 \TX@old@col=\dimen190
@@ -313,15 +336,18 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@delta=\dimen192
 \TX@cols=\count320
 \TX@ftn=\toks27
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count321
 \float@exts=\toks28
 \float@box=\box62
 \@float@everytoks=\toks29
 \@floatcapt=\box63
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
@@ -348,6 +374,7 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
@@ -363,10 +390,13 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
-)) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+))
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -378,7 +408,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count322
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count323
 )
@@ -390,13 +421,13 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \@linkdim=\dimen193
 \Hy@linkcounter=\count324
 \Hy@pagecounter=\count325
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+ (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 ) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count326
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+ (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Hyper figures OFF on input line 4195.
@@ -407,12 +438,14 @@ Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count327
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen194
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -436,6 +469,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count331
 )
 Package hyperref Info: Driver (autodetected): hxetex.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
 \pdfm@box=\box64
@@ -456,7 +490,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
 \Hy@SectionHShift=\skip60
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip61
@@ -474,7 +509,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip73
 \f@nch@widthR=\skip74
 \@temptokenb=\toks30
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip75
 \enit@outerparindent=\dimen197
@@ -482,73 +518,45 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box65
 \enit@count@id=\count336
 \enitdp@description=\count337
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count338
-\lst@gtempboxa=\box66
-\lst@token=\toks32
-\lst@length=\count339
-\lst@currlwidth=\dimen198
-\lst@column=\count340
-\lst@pos=\count341
-\lst@lostspace=\dimen199
-\lst@width=\dimen256
-\lst@newlines=\count342
-\lst@lineno=\count343
-\lst@maxwidth=\dimen257
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count344
-\lst@skipnumbers=\count345
-\lst@framebox=\box67
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2025/11/14 1.11b listings configuration
-))
-Package: listings 2025/11/14 1.11b (Carsten Heinz)
-==> First Aid for listings.sty no longer applied!
-    Expected:
-        2024/09/23 1.10c (Carsten Heinz)
-    but found:
-        2025/11/14 1.11b (Carsten Heinz)
-    so I'm assuming it got fixed.
+)
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen258
-\captionmargin=\dimen259
-\caption@leftmargin=\dimen260
-\caption@rightmargin=\dimen261
-\caption@width=\dimen262
-\caption@indent=\dimen263
-\caption@parindent=\dimen264
-\caption@hangindent=\dimen265
+\caption@tempdima=\dimen198
+\captionmargin=\dimen199
+\caption@leftmargin=\dimen256
+\caption@rightmargin=\dimen257
+\caption@width=\dimen258
+\caption@indent=\dimen259
+\caption@parindent=\dimen260
+\caption@hangindent=\dimen261
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count346
-\c@continuedfloat=\count347
+\c@caption@flags=\count338
+\c@continuedfloat=\count339
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
-\MT@toks=\toks33
-\MT@tempbox=\box68
-\MT@count=\count348
+\MT@toks=\toks32
+\MT@tempbox=\box66
+\MT@count=\count340
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
 LaTeX Info: Redefining \leftprotrusion on input line 1085.
-\MT@prot@toks=\toks34
+\MT@prot@toks=\toks33
 LaTeX Info: Redefining \rightprotrusion on input line 1104.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen266
+\MT@outer@kern=\dimen262
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count349
+\MT@listname@count=\count341
 
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-xet
 ex.def
@@ -564,37 +572,36 @@ File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 22.
-
-(C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\reports\INFORME_TEC
-NICO_MODELO_DMI.aux
+Package hyperref Info: Option `colorlinks' set `true' on input line 27.
+ (DOCUMENTO_FINAL.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 11.
 )
-\openout1 = `INFORME_TECNICO_MODELO_DMI.aux'.
+\openout1 = `DOCUMENTO_FINAL.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -603,15 +610,15 @@ LaTeX Font Info:    ... okay on input line 37.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(64.01869pt, 469.47049pt, 64.01869pt)
-* v-part:(T,H,B)=(64.01869pt, 717.00946pt, 64.01869pt)
+* h-part:(L,W,R)=(61.17325pt, 475.16138pt, 61.17325pt)
+* v-part:(T,H,B)=(61.17325pt, 722.70035pt, 61.17325pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=469.47049pt
-* \textheight=717.00946pt
-* \oddsidemargin=-8.2513pt
-* \evensidemargin=-8.2513pt
-* \topmargin=-45.2513pt
+* \textwidth=475.16138pt
+* \textheight=722.70035pt
+* \oddsidemargin=-11.09674pt
+* \evensidemargin=-11.09674pt
+* \topmargin=-48.09674pt
 * \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -636,77 +643,72 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 37.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 37.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 37.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 37.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 37.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 37.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 37.
-LaTeX Font Info:    Redeclaring math accent \check on input line 37.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 37.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 37.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 37.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 37.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
+LaTeX Font Info:    Redeclaring math accent \check on input line 41.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 37.
+(Font)              `operators' in the math version `normal' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 37.
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 37.
+(Font)              `operators' in the math version `bold' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 37.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 37.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 37.
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 37.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 37.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 37.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 37.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 37.
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 37.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 37.
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
-Package hyperref Info: Link coloring ON on input line 37.
-
-(C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\reports\INFORME_TEC
-NICO_MODELO_DMI.out)
-(C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\reports\INFORME_TEC
-NICO_MODELO_DMI.out)
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 41.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+Package hyperref Info: Link coloring ON on input line 41.
+(DOCUMENTO_FINAL.out) (DOCUMENTO_FINAL.out)
 \@outlinefile=\write3
-\openout3 = `INFORME_TECNICO_MODELO_DMI.out'.
+\openout3 = `DOCUMENTO_FINAL.out'.
 
-\c@lstlisting=\count350
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 37.
-Package microtype Info: Applying patch `item' on input line 37.
-Package microtype Info: Applying patch `toc' on input line 37.
-Package microtype Info: Applying patch `eqnum' on input line 37.
-Package microtype Info: Applying patch `footnote' on input line 37.
-Package microtype Info: Applying patch `verbatim' on input line 37.
-LaTeX Info: Redefining \microtypesetup on input line 37.
+LaTeX Info: Redefining \microtypecontext on input line 41.
+Package microtype Info: Applying patch `item' on input line 41.
+Package microtype Info: Applying patch `toc' on input line 41.
+Package microtype Info: Applying patch `eqnum' on input line 41.
+Package microtype Info: Applying patch `footnote' on input line 41.
+Package microtype Info: Applying patch `verbatim' on input line 41.
+LaTeX Info: Redefining \microtypesetup on input line 41.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -716,107 +718,122 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Arial' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [1
 
-(C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\reports\INFORME_TEC
-NICO_MODELO_DMI.toc
+] (DOCUMENTO_FINAL.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
 (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+)
+(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-) [1
-
-])
+)
+[1])
 \tf@toc=\write4
-\openout4 = `INFORME_TECNICO_MODELO_DMI.toc'.
+\openout4 = `DOCUMENTO_FINAL.toc'.
 
-[2]
+ [2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[3]
-Underfull \hbox (badness 4454) in paragraph at lines 94--94
-[]|\TU/Arial(0)/b/n/10.95 Versión de-
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]|$[][][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-[]|\TU/Arial(0)/m/n/10.95 No declara-
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]|$[][][][][][] [] [][][][][][][][][][][] []
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
-[]|\TU/Arial(0)/m/n/10.95 Biblioteca
- []
-
-[4]
-Overfull \hbox (14.57593pt too wide) in paragraph at lines 136--137
-\TU/Arial(0)/m/n/10.95 contrato de variables y una preparación común para entre
-namiento e inferencia. \TU/lmtt/m/n/10.95 src/model/train.py
- []
-
-
-Overfull \hbox (10.66536pt too wide) in paragraph at lines 162--162
-[]|\TU/lmtt/m/n/10 categoria_terrabovina| 
- []
-
-
-Overfull \hbox (21.16536pt too wide) in paragraph at lines 175--175
-[]|\TU/lmtt/m/n/10 estado_fisiologico_norm| 
- []
-
-[5] [6]
+ignored error: Infinite glue shrinkage found in box being split [4] [5]
 File: figures/6_weight_vs_dmi_scatter.png Graphic file (type bmp)
 <figures/6_weight_vs_dmi_scatter.png>
 File: figures/7_dmi_by_category_boxplot.png Graphic file (type bmp)
 <figures/7_dmi_by_category_boxplot.png>
-[7] [8]
-Overfull \hbox (26.21999pt too wide) in paragraph at lines 282--283
-[]\TU/Arial(0)/b/n/10.95 Numéricas: \TU/lmtt/m/n/10.95 SimpleImputer(strategy="
-median", add_indicator=True) \TU/Arial(0)/m/n/10.95 y luego \TU/lmtt/m/n/10.95 
-StandardScaler\TU/Arial(0)/m/n/10.95 .
- []
 
+[6]
 File: figures/8_correlation_heatmap.png Graphic file (type bmp)
 <figures/8_correlation_heatmap.png>
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
-\TU/Arial(0)/m/n/10.95 variables categóricas declaradas, \TU/lmtt/m/n/10.95 ran
-dom_seed=42\TU/Arial(0)/m/n/10.95 , \TU/lmtt/m/n/10.95 verbose=False\TU/Arial(0
-)/m/n/10.95 ,
+ [7]
+Overfull \hbox (22.21043pt too wide) in paragraph at lines 256--257
+[]\TU/Arial(0)/b/n/10.95 ¿Qué mide? \TU/Arial(0)/m/n/10.95 El porcentaje de des
+viación respecto al consumo real promedio ($[] \OT1/cmr/m/n/10.95 = 4\OML/cmm/m
+/it/10.95 ; \OT1/cmr/m/n/10.95 85[]$\TU/Arial(0)/m/n/10.95 ). 
+ []
+
+[8] [9]
+File: figures/1_model_comparison_mae_r2.png Graphic file (type bmp)
+<figures/1_model_comparison_mae_r2.png>
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+[]|\TU/Arial(0)/b/n/10.95 Lectura por-
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 399--399
+\TU/Arial(0)/m/n/10.95 riabilidad repre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+[]|\TU/Arial(0)/m/n/10.95 Reducción de
  []
 
 [11]
-File: figures/1_model_comparison_mae_r2.png Graphic file (type bmp)
-<figures/1_model_comparison_mae_r2.png>
-[12]
-File: figures/5_mae_by_category.png Graphic file (type bmp)
-<figures/5_mae_by_category.png>
-[13]
 File: figures/2_actual_vs_predicted.png Graphic file (type bmp)
 <figures/2_actual_vs_predicted.png>
+ [12]
 File: figures/3_residuals_distribution.png Graphic file (type bmp)
 <figures/3_residuals_distribution.png>
-[14] [15]
-File: figures/4_feature_importance.png Graphic file (type bmp)
-<figures/4_feature_importance.png>
-(C:\Users\ignab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [16] [17] [18] [19] [20]
-(C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\reports\INFORME_TEC
-NICO_MODELO_DMI.aux
+ [13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 588--588
+[]|\TU/Arial(0)/b/n/10.95 Lectura por-
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 588--588
+\TU/Arial(0)/m/n/10.95 riabilidad repre-
+ []
+
+[16] [17]
+File: figures_v2_mejorado/5_actual_vs_predicted.png Graphic file (type bmp)
+<figures_v2_mejorado/5_actual_vs_predicted.png>
+ [18]
+File: figures_metricas_detalladas/1_global_tres_evaluaciones.png Graphic file (
+type bmp)
+<figures_metricas_detalladas/1_global_tres_evaluaciones.png>
+ [19]
+File: figures_metricas_detalladas/2_mae_categoria.png Graphic file (type bmp)
+<figures_metricas_detalladas/2_mae_categoria.png>
+File: figures_metricas_detalladas/3_rmse_categoria.png Graphic file (type bmp)
+<figures_metricas_detalladas/3_rmse_categoria.png>
+ [20]
+File: figures_metricas_detalladas/4_r2_categoria.png Graphic file (type bmp)
+<figures_metricas_detalladas/4_r2_categoria.png>
+File: figures_metricas_detalladas/6_cambio_porcentual_mae.png Graphic file (typ
+e bmp)
+<figures_metricas_detalladas/6_cambio_porcentual_mae.png>
+ [21]
+File: figures_metricas_detalladas/5_mae_por_fold.png Graphic file (type bmp)
+<figures_metricas_detalladas/5_mae_por_fold.png>
+ [22] [23] [24] (DOCUMENTO_FINAL.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -824,18 +841,16 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-Package rerunfilecheck Info: File `INFORME_TECNICO_MODELO_DMI.out' has not chan
-ged.
-(rerunfilecheck)             Checksum: E69CA639099B3CD59E7B5783050E76C1;8493.
+Package rerunfilecheck Info: File `DOCUMENTO_FINAL.out' has not changed.
+(rerunfilecheck)             Checksum: 03629371C7A0CCA9C67A7AFC8A7D3240;9465.
  ) 
 Here is how much of TeX's memory you used:
- 19815 strings out of 402987
- 364915 string characters out of 5448524
- 1137623 words of memory out of 5000000
- 48280 multiletter control sequences out of 15000+600000
- 637462 words of font info for 109 fonts, out of 8000000 for 9000
+ 18502 strings out of 402987
+ 347139 string characters out of 5448524
+ 871468 words of memory out of 5000000
+ 46975 multiletter control sequences out of 15000+600000
+ 637470 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,12n,93p,1033b,1956s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,12n,93p,1014b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on C:\Users\ignab\OneDrive\Escritorio\Desarrollo\Modelo-IA-Py\re
-ports\INFORME_TECNICO_MODELO_DMI.pdf (20 pages).
+Output written on DOCUMENTO_FINAL.pdf (25 pages).

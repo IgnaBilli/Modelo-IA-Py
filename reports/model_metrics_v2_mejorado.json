@@ -1,0 +1,586 @@
+{
+  "version": "2.1.0-experimental",
+  "trained_at": "2026-07-26T03:57:48.386827+00:00",
+  "dataset_rows": 3833,
+  "model_type": "CategoryBlendRegressor",
+  "physiological_states": {
+    "L": "Lactando",
+    "P": "Preñada / Gestante",
+    "B": "Seca / Vacía",
+    "N": "Normal / No gestante ni lactante",
+    "P/L": "Preñada y Lactando",
+    "B/L": "Seca y Lactando / transición",
+    "N/P": "No lactante y Preñada",
+    "DESCONOCIDO": "Sin registro"
+  },
+  "validation": "Nested StratifiedGroupKFold: 5 outer and 3 inner folds",
+  "final_routing": {
+    "Vaca": {
+      "specialist": "catboost_mae",
+      "specialist_weight": 0.45,
+      "score": 0.991456,
+      "inner_mae": 1.5603,
+      "inner_rmse": 2.0558
+    },
+    "Vaquilla": {
+      "specialist": "catboost_mae",
+      "specialist_weight": 0.25,
+      "score": 0.998377,
+      "inner_mae": 0.7516,
+      "inner_rmse": 0.9446
+    },
+    "Novillo": {
+      "specialist": "catboost_rmse",
+      "specialist_weight": 1.0,
+      "score": 0.993022,
+      "inner_mae": 0.6608,
+      "inner_rmse": 0.7936
+    },
+    "Toro": {
+      "specialist": "ridge_fisio_a100",
+      "specialist_weight": 1.0,
+      "score": 0.980607,
+      "inner_mae": 0.9908,
+      "inner_rmse": 1.3485
+    },
+    "Ternero/Ternera": {
+      "specialist": "ridge_fisio_a0.3",
+      "specialist_weight": 1.0,
+      "score": 0.913177,
+      "inner_mae": 0.5216,
+      "inner_rmse": 0.6529
+    }
+  },
+  "nested_oof_metrics": {
+    "mae": 1.0791,
+    "rmse": 1.5332,
+    "r2": 0.683,
+    "bias_real_minus_pred": 0.0796,
+    "por_categoria": {
+      "Vaca": {
+        "mae": 1.5625,
+        "rmse": 2.0585,
+        "r2": 0.4123,
+        "bias_real_minus_pred": 0.1544
+      },
+      "Vaquilla": {
+        "mae": 0.7595,
+        "rmse": 0.9503,
+        "r2": 0.5992,
+        "bias_real_minus_pred": 0.0062
+      },
+      "Novillo": {
+        "mae": 0.6624,
+        "rmse": 0.7974,
+        "r2": 0.4205,
+        "bias_real_minus_pred": 0.0378
+      },
+      "Toro": {
+        "mae": 1.019,
+        "rmse": 1.4208,
+        "r2": 0.4651,
+        "bias_real_minus_pred": 0.1042
+      },
+      "Ternero/Ternera": {
+        "mae": 0.5216,
+        "rmse": 0.6529,
+        "r2": 0.6415,
+        "bias_real_minus_pred": -0.0014
+      }
+    },
+    "macro_mae": 0.905,
+    "worst_category_mae": 1.5625,
+    "folds": [
+      {
+        "mae": 1.0892,
+        "rmse": 1.5178,
+        "r2": 0.67,
+        "bias_real_minus_pred": -0.0313,
+        "fold": 1,
+        "routing": {
+          "Vaca": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.4,
+            "score": 0.993041,
+            "inner_mae": 1.5783,
+            "inner_rmse": 2.0725
+          },
+          "Vaquilla": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.995615,
+            "inner_mae": 0.7357,
+            "inner_rmse": 0.9322
+          },
+          "Novillo": {
+            "specialist": "catboost_rmse",
+            "specialist_weight": 0.75,
+            "score": 0.9918,
+            "inner_mae": 0.6323,
+            "inner_rmse": 0.7791
+          },
+          "Toro": {
+            "specialist": "ridge_fisio_a100",
+            "specialist_weight": 1.0,
+            "score": 0.944498,
+            "inner_mae": 0.9979,
+            "inner_rmse": 1.3888
+          },
+          "Ternero/Ternera": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.919374,
+            "inner_mae": 0.5186,
+            "inner_rmse": 0.65
+          }
+        }
+      },
+      {
+        "mae": 1.0821,
+        "rmse": 1.5413,
+        "r2": 0.7198,
+        "bias_real_minus_pred": 0.1222,
+        "fold": 2,
+        "routing": {
+          "Vaca": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.5,
+            "score": 0.98959,
+            "inner_mae": 1.5427,
+            "inner_rmse": 2.0379
+          },
+          "Vaquilla": {
+            "specialist": "ridge_v1",
+            "specialist_weight": 0.0,
+            "score": 1.0,
+            "inner_mae": 0.7695932245893378,
+            "inner_rmse": 0.9659310602758371
+          },
+          "Novillo": {
+            "specialist": "catboost_rmse",
+            "specialist_weight": 0.4,
+            "score": 0.996545,
+            "inner_mae": 0.6513,
+            "inner_rmse": 0.7836
+          },
+          "Toro": {
+            "specialist": "ridge_fisio_a100",
+            "specialist_weight": 0.9,
+            "score": 0.991441,
+            "inner_mae": 1.0754,
+            "inner_rmse": 1.4057
+          },
+          "Ternero/Ternera": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.9016,
+            "inner_mae": 0.5243,
+            "inner_rmse": 0.6599
+          }
+        }
+      },
+      {
+        "mae": 1.131,
+        "rmse": 1.5966,
+        "r2": 0.6859,
+        "bias_real_minus_pred": 0.1319,
+        "fold": 3,
+        "routing": {
+          "Vaca": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.45,
+            "score": 0.992777,
+            "inner_mae": 1.5579,
+            "inner_rmse": 2.0568
+          },
+          "Vaquilla": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.45,
+            "score": 0.994402,
+            "inner_mae": 0.754,
+            "inner_rmse": 0.9446
+          },
+          "Novillo": {
+            "specialist": "ridge_fisio_a100",
+            "specialist_weight": 1.0,
+            "score": 0.996277,
+            "inner_mae": 0.6497,
+            "inner_rmse": 0.7828
+          },
+          "Toro": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.971448,
+            "inner_mae": 0.9539,
+            "inner_rmse": 1.3072
+          },
+          "Ternero/Ternera": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.918979,
+            "inner_mae": 0.5201,
+            "inner_rmse": 0.6489
+          }
+        }
+      },
+      {
+        "mae": 1.0489,
+        "rmse": 1.4931,
+        "r2": 0.6796,
+        "bias_real_minus_pred": 0.0542,
+        "fold": 4,
+        "routing": {
+          "Vaca": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.35,
+            "score": 0.995414,
+            "inner_mae": 1.597,
+            "inner_rmse": 2.0885
+          },
+          "Vaquilla": {
+            "specialist": "ridge_v1",
+            "specialist_weight": 0.0,
+            "score": 1.0,
+            "inner_mae": 0.7506296316920945,
+            "inner_rmse": 0.9387735453488428
+          },
+          "Novillo": {
+            "specialist": "catboost_rmse",
+            "specialist_weight": 1.0,
+            "score": 0.985968,
+            "inner_mae": 0.6915,
+            "inner_rmse": 0.8295
+          },
+          "Toro": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.9,
+            "score": 0.953742,
+            "inner_mae": 0.9354,
+            "inner_rmse": 1.3347
+          },
+          "Ternero/Ternera": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.934362,
+            "inner_mae": 0.533,
+            "inner_rmse": 0.6632
+          }
+        }
+      },
+      {
+        "mae": 1.0484,
+        "rmse": 1.5204,
+        "r2": 0.6294,
+        "bias_real_minus_pred": 0.1202,
+        "fold": 5,
+        "routing": {
+          "Vaca": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.55,
+            "score": 0.98813,
+            "inner_mae": 1.5727,
+            "inner_rmse": 2.0712
+          },
+          "Vaquilla": {
+            "specialist": "catboost_mae",
+            "specialist_weight": 0.05,
+            "score": 0.999838,
+            "inner_mae": 0.7416,
+            "inner_rmse": 0.9307
+          },
+          "Novillo": {
+            "specialist": "ridge_fisio_a100",
+            "specialist_weight": 1.0,
+            "score": 0.992296,
+            "inner_mae": 0.7065,
+            "inner_rmse": 0.8466
+          },
+          "Toro": {
+            "specialist": "ridge_fisio_a3",
+            "specialist_weight": 0.85,
+            "score": 0.978607,
+            "inner_mae": 1.0219,
+            "inner_rmse": 1.3512
+          },
+          "Ternero/Ternera": {
+            "specialist": "ridge_fisio_a0.3",
+            "specialist_weight": 1.0,
+            "score": 0.904473,
+            "inner_mae": 0.5216,
+            "inner_rmse": 0.6548
+          }
+        }
+      }
+    ]
+  },
+  "development_oof_metrics": {
+    "mae": 1.0746,
+    "rmse": 1.5266,
+    "r2": 0.6858,
+    "bias_real_minus_pred": 0.0767,
+    "por_categoria": {
+      "Vaca": {
+        "mae": 1.5603,
+        "rmse": 2.0558,
+        "r2": 0.4139,
+        "bias_real_minus_pred": 0.1528
+      },
+      "Vaquilla": {
+        "mae": 0.7516,
+        "rmse": 0.9446,
+        "r2": 0.604,
+        "bias_real_minus_pred": 0.0222
+      },
+      "Novillo": {
+        "mae": 0.6608,
+        "rmse": 0.7936,
+        "r2": 0.4259,
+        "bias_real_minus_pred": 0.031
+      },
+      "Toro": {
+        "mae": 0.9908,
+        "rmse": 1.3485,
+        "r2": 0.5181,
+        "bias_real_minus_pred": 0.0244
+      },
+      "Ternero/Ternera": {
+        "mae": 0.5216,
+        "rmse": 0.6529,
+        "r2": 0.6415,
+        "bias_real_minus_pred": -0.0014
+      }
+    },
+    "macro_mae": 0.897,
+    "worst_category_mae": 1.5603
+  },
+  "comparison_with_v1_nested": {
+    "mae": {
+      "v1": 1.1019,
+      "v2": 1.0791,
+      "difference_v2_minus_v1": -0.0228
+    },
+    "rmse": {
+      "v1": 1.5354,
+      "v2": 1.5332,
+      "difference_v2_minus_v1": -0.0022
+    },
+    "r2": {
+      "v1": 0.6821,
+      "v2": 0.683,
+      "difference_v2_minus_v1": 0.0009
+    },
+    "por_categoria": {
+      "Vaca": {
+        "mae": {
+          "v1": 1.5857,
+          "v2": 1.5625,
+          "difference_v2_minus_v1": -0.0232
+        },
+        "rmse": {
+          "v1": 2.0608,
+          "v2": 2.0585,
+          "difference_v2_minus_v1": -0.0023
+        },
+        "r2": {
+          "v1": 0.411,
+          "v2": 0.4123,
+          "difference_v2_minus_v1": 0.0013
+        }
+      },
+      "Vaquilla": {
+        "mae": {
+          "v1": 0.754,
+          "v2": 0.7595,
+          "difference_v2_minus_v1": 0.0055
+        },
+        "rmse": {
+          "v1": 0.9449,
+          "v2": 0.9503,
+          "difference_v2_minus_v1": 0.0054
+        },
+        "r2": {
+          "v1": 0.6037,
+          "v2": 0.5992,
+          "difference_v2_minus_v1": -0.0045
+        }
+      },
+      "Novillo": {
+        "mae": {
+          "v1": 0.6639,
+          "v2": 0.6624,
+          "difference_v2_minus_v1": -0.0015
+        },
+        "rmse": {
+          "v1": 0.8028,
+          "v2": 0.7974,
+          "difference_v2_minus_v1": -0.0054
+        },
+        "r2": {
+          "v1": 0.4126,
+          "v2": 0.4205,
+          "difference_v2_minus_v1": 0.0079
+        }
+      },
+      "Toro": {
+        "mae": {
+          "v1": 1.0204,
+          "v2": 1.019,
+          "difference_v2_minus_v1": -0.0014
+        },
+        "rmse": {
+          "v1": 1.3642,
+          "v2": 1.4208,
+          "difference_v2_minus_v1": 0.0566
+        },
+        "r2": {
+          "v1": 0.5068,
+          "v2": 0.4651,
+          "difference_v2_minus_v1": -0.0417
+        }
+      },
+      "Ternero/Ternera": {
+        "mae": {
+          "v1": 0.5846,
+          "v2": 0.5216,
+          "difference_v2_minus_v1": -0.063
+        },
+        "rmse": {
+          "v1": 0.7018,
+          "v2": 0.6529,
+          "difference_v2_minus_v1": -0.0489
+        },
+        "r2": {
+          "v1": 0.5858,
+          "v2": 0.6415,
+          "difference_v2_minus_v1": 0.0557
+        }
+      }
+    }
+  },
+  "comparison_with_v1_development": {
+    "mae": {
+      "v1": 1.1019,
+      "v2": 1.0746,
+      "difference_v2_minus_v1": -0.0273
+    },
+    "rmse": {
+      "v1": 1.5354,
+      "v2": 1.5266,
+      "difference_v2_minus_v1": -0.0088
+    },
+    "r2": {
+      "v1": 0.6821,
+      "v2": 0.6858,
+      "difference_v2_minus_v1": 0.0037
+    },
+    "por_categoria": {
+      "Vaca": {
+        "mae": {
+          "v1": 1.5857,
+          "v2": 1.5603,
+          "difference_v2_minus_v1": -0.0254
+        },
+        "rmse": {
+          "v1": 2.0608,
+          "v2": 2.0558,
+          "difference_v2_minus_v1": -0.005
+        },
+        "r2": {
+          "v1": 0.411,
+          "v2": 0.4139,
+          "difference_v2_minus_v1": 0.0029
+        }
+      },
+      "Vaquilla": {
+        "mae": {
+          "v1": 0.754,
+          "v2": 0.7516,
+          "difference_v2_minus_v1": -0.0024
+        },
+        "rmse": {
+          "v1": 0.9449,
+          "v2": 0.9446,
+          "difference_v2_minus_v1": -0.0003
+        },
+        "r2": {
+          "v1": 0.6037,
+          "v2": 0.604,
+          "difference_v2_minus_v1": 0.0003
+        }
+      },
+      "Novillo": {
+        "mae": {
+          "v1": 0.6639,
+          "v2": 0.6608,
+          "difference_v2_minus_v1": -0.0031
+        },
+        "rmse": {
+          "v1": 0.8028,
+          "v2": 0.7936,
+          "difference_v2_minus_v1": -0.0092
+        },
+        "r2": {
+          "v1": 0.4126,
+          "v2": 0.4259,
+          "difference_v2_minus_v1": 0.0133
+        }
+      },
+      "Toro": {
+        "mae": {
+          "v1": 1.0204,
+          "v2": 0.9908,
+          "difference_v2_minus_v1": -0.0296
+        },
+        "rmse": {
+          "v1": 1.3642,
+          "v2": 1.3485,
+          "difference_v2_minus_v1": -0.0157
+        },
+        "r2": {
+          "v1": 0.5068,
+          "v2": 0.5181,
+          "difference_v2_minus_v1": 0.0113
+        }
+      },
+      "Ternero/Ternera": {
+        "mae": {
+          "v1": 0.5846,
+          "v2": 0.5216,
+          "difference_v2_minus_v1": -0.063
+        },
+        "rmse": {
+          "v1": 0.7018,
+          "v2": 0.6529,
+          "difference_v2_minus_v1": -0.0489
+        },
+        "r2": {
+          "v1": 0.5858,
+          "v2": 0.6415,
+          "difference_v2_minus_v1": 0.0557
+        }
+      }
+    }
+  },
+  "weight_ranges_kg": {
+    "Vaca": {
+      "min": 79.1,
+      "max": 525.2
+    },
+    "Vaquilla": {
+      "min": 54.6,
+      "max": 412.8
+    },
+    "Novillo": {
+      "min": 59.5,
+      "max": 278.9
+    },
+    "Toro": {
+      "min": 97.0,
+      "max": 595.5
+    },
+    "Ternero/Ternera": {
+      "min": 19.6,
+      "max": 235.9
+    }
+  }
+}
